@@ -1,24 +1,24 @@
 import React from "react";
 import "../styles/PhotoListItem.scss";
-// import FavBadge from "./FavBadge";
+import PhotoFavButton from "./PhotoFavButton";
 
-{/* <FavBadge/> */}
+
 
 const PhotoListItem = (props) => {
 
 
+
   return (
     <div className=" photo-list__item " >
-    
-      <img alt="main pic" className="photo-list__image" src={props.sample.imageSource}></img>
+      <PhotoFavButton photoId={props.data.id}/>
+      <img alt="main pic" className="photo-list__image" src={props.data.urls.regular}></img>
       <br/>
-      
-      <img alt="profile pic" className="photo-list__user-profile" src={props.sample.profile}></img>
+      <img alt="profile pic" className="photo-list__user-profile" src={props.data.user.profile}></img>
       <div className="photo-list__user-info photo-list__user-details" >
-        {props.sample.username}
+        {props.data.user.username}
       </div>
       <div className="photo-list__user-location" >
-        {props.sample.location.city}, {props.sample.location.country}
+        {props.data.location.city}, {props.data.location.country}
       </div>
     </div>
   );
