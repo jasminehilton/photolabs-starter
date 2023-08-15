@@ -6,9 +6,10 @@
   left: 50%;
   transform: translate(-50%, -40%);
   height: 80%;
-  width: 55%;
+  width: 90%;
   overflow-y: scroll;
   border-radius: 12px;
+  // margin: auto;
 }
 
 .photo-details-modal__close-button {
@@ -28,10 +29,14 @@
   margin-left: 36px;
   margin-top: 8px;
 }
-
+.photo-details-modal__image_container {
+  display:flex;
+  margin: auto;
+}
 .photo-details-modal__image {
   max-width: 95%;
-  border-radius: 8px;
+  display:flex;
+  margin: auto;
 }
 
 .photo-details-modal__top-bar {
@@ -55,4 +60,12 @@
   margin-top: 24px;
   margin-bottom: 24px;
   width: 90%;
+}
+
+.photo-list__user-details {
+
+  display: flex;
+  // margin: auto;
+  // justify-content: center;  
+  // margin-left: 36px;
 }
