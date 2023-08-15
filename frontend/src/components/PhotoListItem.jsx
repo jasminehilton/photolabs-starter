@@ -15,9 +15,10 @@ const PhotoListItem = (props) => {
   };
 
   return (
-    <div className="photo-list__item " onClick={handleClick}>
+    <div className="photo-list__item " >
+      <img alt="main pic" className="photo-list__image " src={props.data.urls.regular} onClick={handleClick}>
+      </img>
       <PhotoFavButton photoId={props.data.id}/>
-      <img alt="main pic" className="photo-list__image " src={props.data.urls.regular} ></img>
       <br/>
       <div className="photo-list__user-details" >
         <img alt="profile pic" className="photo-list__user-profile" src={props.data.user.profile}></img>

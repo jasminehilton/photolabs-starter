@@ -32,16 +32,6 @@ const PhotoList = () => {
       });
   };
 
-  // run it once the component has been loaded
-  useEffect(() => {
-    getPhotos();
-  }, []);
-
-  // run it for any event that happens
-  // useEffect(() => {
-  //   getPhotos();
-  // });
-
   // run it for any event that happens to test, but if test is true then only load photos
   useEffect(() => {
     if (state.selectedTopic > 0) {
