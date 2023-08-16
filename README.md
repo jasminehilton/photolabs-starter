@@ -1,10 +1,10 @@
 # Photolabs
 The PhotoLabs project for the Web Development React course programming. This project is a display only mock app of IG.
 ## Sneak Peak 
-!["This is the main list view"]
+!["This is the main list view"](frontend/src/assets/photolabs-starter-main.png)
 
-!["You can "like" your favorite photos"]
-!["This is the view when 1 photo is clicked, showing a larger view"]
+!["You can "like" your favorite photos"](frontend/src/assets/photolabs-starter-liked.png)
+!["This is the view when 1 photo is clicked, showing a larger view"](frontend/src/assets/photolabs-starter-selected.png)
 
 
 ## Dependencies
