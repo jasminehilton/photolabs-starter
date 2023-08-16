@@ -1,17 +1,14 @@
 import React, { useContext, useState } from 'react';
-
 import '../styles/PhotoFavButton.scss';
 import FavIcon from './FavIcon';
 import { myContext} from '../App';
 import {  ACTIONS } from 'hooks/useApplicationData';
 
-
-
 const PhotoFavButton = (props) => {
   const {state, dispatch} = useContext(myContext);
 
   const [isLiked, setIsLiked] = useState(false);
-
+  // handles the click event and stores the id of liked photo
   const handleFavoriteClick = () => {
     const photoID = props.photoId;
     const isFavorite = state.favoritePhotos.filter((id) => id === photoID).length > 0;
@@ -23,8 +20,6 @@ const PhotoFavButton = (props) => {
     }
     setIsLiked(!isLiked);
   };
-
-
 
   return (
     <button className="photo-list__fav-icon" onClick={handleFavoriteClick}>

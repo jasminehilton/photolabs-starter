@@ -6,7 +6,7 @@ import TopicListItem from "./TopicListItem";
 const TopicList = () => {
 
   const [topics, setTopics] = useState([]);
-
+  // get request to get topics from the api
   const getTopics = () => {
     axios.get('http://localhost:8001/api/topics')
       .then((res) => {

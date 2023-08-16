@@ -4,13 +4,11 @@ import "../styles/PhotoList.scss";
 import axios from "axios";
 import { myContext } from "App";
 
-
-
 const PhotoList = () => {
 
   const [photos, setPhotos] = useState([]);
   const {state, dispatch} = useContext(myContext);
-
+  // get request to get the photos from the api
   const getPhotos = () => {
     axios.get('http://localhost:8001/api/photos')
       .then((res) => {
@@ -19,7 +17,7 @@ const PhotoList = () => {
         console.log('error getting photos ', err);
       });
   };
-
+  // get request to get the photso by topic
   const getPhotosByTopic = () => {
     axios.get(`http://localhost:8001/api/topics/photos/${state.selectedTopic}`)
       .then((res) => {

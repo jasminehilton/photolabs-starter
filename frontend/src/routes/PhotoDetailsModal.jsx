@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-
 import '../styles/PhotoDetailsModal.scss';
 import closeSymbol from '../assets/closeSymbol.svg';
 import { myContext } from 'App';
@@ -9,7 +8,7 @@ import { ACTIONS } from 'hooks/useApplicationData';
 
 const PhotoDetailsModal = (props) => {
   const {state, dispatch} = useContext(myContext);
-
+  // handles the close on click event with an action by changing the value to null
   const handleClose = () => {
     dispatch({type: ACTIONS.SELECT_PHOTO, value: null});
   };

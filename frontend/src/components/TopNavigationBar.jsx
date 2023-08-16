@@ -1,10 +1,8 @@
 import React, { useContext } from 'react';
-
 import '../styles/TopNavigationBar.scss';
 import FavIcon from './FavIcon';
 import TopicList from './TopicList';
 import { myContext } from '../App';
-
 
 const TopNavigation = () => {
 
@@ -15,7 +13,6 @@ const TopNavigation = () => {
       <span className="top-nav-bar__logo">PhotoLabs</span>
       <TopicList />
       <FavIcon selected={true} displayAlert={state.favoritePhotos.length > 0}/>
-    
     </div>
   );
 };

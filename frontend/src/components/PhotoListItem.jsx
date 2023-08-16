@@ -4,11 +4,9 @@ import PhotoFavButton from "./PhotoFavButton";
 import { myContext } from "App";
 import { ACTIONS } from "hooks/useApplicationData";
 
-
-
 const PhotoListItem = (props) => {
   const {state, dispatch} = useContext(myContext);
-
+  // handles the click event with an action
   const handleClick = () => {
     dispatch({type: ACTIONS.SELECT_PHOTO, value: props.data});
   };
