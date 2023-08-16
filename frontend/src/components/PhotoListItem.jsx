@@ -10,7 +10,6 @@ const PhotoListItem = (props) => {
   const {state, dispatch} = useContext(myContext);
 
   const handleClick = () => {
-    dispatch({type: ACTIONS.DISPLAY_PHOTO_DETAILS, value: true});
     dispatch({type: ACTIONS.SELECT_PHOTO, value: props.data});
   };
 

@@ -4,7 +4,6 @@ export const ACTIONS = {
   SET_PHOTO_DATA: 'SET_PHOTO_DATA',
   SET_TOPIC_DATA: 'SET_TOPIC_DATA',
   SELECT_PHOTO: 'SELECT_PHOTO',
-  DISPLAY_PHOTO_DETAILS: 'DISPLAY_PHOTO_DETAILS',
   SELECT_TOPIC: 'SELECT_TOPIC'
 };
 
@@ -34,11 +33,6 @@ export const photoLabReducer = (state, action) => {
     return {
       ...state,
       selectedPhoto: action.value
-    };
-  case ACTIONS.DISPLAY_PHOTO_DETAILS:
-    return {
-      ...state,
-      displayModal: action.value
     };
   case ACTIONS.SELECT_TOPIC:
     return {

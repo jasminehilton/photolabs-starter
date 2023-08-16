@@ -12,12 +12,7 @@ const PhotoDetailsModal = (props) => {
 
   const handleClose = () => {
     dispatch({type: ACTIONS.SELECT_PHOTO, value: null});
-    dispatch({type: ACTIONS.DISPLAY_PHOTO_DETAILS, value: false});
   };
-
-  console.log(props.data);
-  console.log(state.selectedPhoto);
-
   return (
     <div className="photo-details-modal ">
       <button className="photo-details-modal__close-button" onClick={handleClose}>
@@ -26,7 +21,7 @@ const PhotoDetailsModal = (props) => {
 
       <div className="photo-list__item photo-details-modal__image_container" >
         <img alt="main pic" className="photo-details-modal__image" src={props.data.urls.regular}></img>
-        <PhotoFavButton photoId={props.data.id}/>
+        <PhotoFavButton className="" photoId={props.data.id}/>
         <br/>
         <div className="photo-list__user-details" >
           <img alt="profile pic" className="photo-list__user-profile" src={props.data.user.profile}></img>

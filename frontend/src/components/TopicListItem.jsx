@@ -9,6 +9,7 @@ const TopicListItem = (props) => {
 
   const handleTopicSelection = () => {
     dispatch({type: ACTIONS.SELECT_TOPIC, value: props.data.id});
+    console.log(props);
   };
 
 

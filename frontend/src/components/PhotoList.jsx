@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
 import PhotoListItem from "./PhotoListItem";
-import photos from "mocks/photos";
 import "../styles/PhotoList.scss";
 import axios from "axios";
 import { myContext } from "App";
@@ -16,8 +15,6 @@ const PhotoList = () => {
     axios.get('http://localhost:8001/api/photos')
       .then((res) => {
         setPhotos(res.data);
-
-
       }).catch((err) => {
         console.log('error getting photos ', err);
       });
