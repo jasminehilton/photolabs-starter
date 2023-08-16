@@ -27,13 +27,9 @@ const PhotoFavButton = (props) => {
 
 
   return (
-    <div>
-      <div>
-        <button className="photo-list__fav-icon" onClick={handleFavoriteClick}>
-          <FavIcon selected={isLiked} />
-        </button>
-      </div>
-    </div>
+    <button className="photo-list__fav-icon" onClick={handleFavoriteClick}>
+      <FavIcon selected={isLiked} />
+    </button>
   );
 };
 

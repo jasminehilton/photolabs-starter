@@ -18,10 +18,9 @@ const PhotoDetailsModal = (props) => {
       <button className="photo-details-modal__close-button" onClick={handleClose}>
         <img src={closeSymbol} alt="close symbol" />
       </button>
-
       <div className="photo-list__item photo-details-modal__image_container" >
+        <PhotoFavButton photoId={props.data.id}/>
         <img alt="main pic" className="photo-details-modal__image" src={props.data.urls.regular}></img>
-        <PhotoFavButton className="" photoId={props.data.id}/>
         <br/>
         <div className="photo-list__user-details" >
           <img alt="profile pic" className="photo-list__user-profile" src={props.data.user.profile}></img>
@@ -33,7 +32,6 @@ const PhotoDetailsModal = (props) => {
           </div>
         </div>
       </div>
-
       <br/>
       <header className='.photo-details-modal__header'></header>
       <div>
