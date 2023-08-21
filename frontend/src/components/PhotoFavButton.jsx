@@ -11,6 +11,7 @@ const PhotoFavButton = (props) => {
   // handles the click event and stores the id of liked photo
   const handleFavoriteClick = () => {
     const photoID = props.photoId;
+    // const photoID = props;
     const isFavorite = state.favoritePhotos.filter((id) => id === photoID).length > 0;
     
     if (isFavorite) {
