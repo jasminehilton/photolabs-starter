@@ -7,24 +7,22 @@ import {  ACTIONS } from 'hooks/useApplicationData';
 const PhotoFavButton = (props) => {
   const {state, dispatch} = useContext(myContext);
 
-  const [isLiked, setIsLiked] = useState(false);
+  const isFavourite = () => {
+    return state.favoritePhotos.filter((id) => id === props.photoId).length > 0;
+  };
+
   // handles the click event and stores the id of liked photo
   const handleFavoriteClick = () => {
-    const photoID = props.photoId;
-    // const photoID = props;
-    const isFavorite = state.favoritePhotos.filter((id) => id === photoID).length > 0;
-    
-    if (isFavorite) {
-      dispatch({type: ACTIONS.FAV_PHOTO_REMOVED, value: photoID});
+    if (isFavourite()) {
+      dispatch({type: ACTIONS.FAV_PHOTO_REMOVED, value: props.photoId});
     } else {
-      dispatch({type: ACTIONS.FAV_PHOTO_ADDED, value: photoID});
+      dispatch({type: ACTIONS.FAV_PHOTO_ADDED, value: props.photoId});
     }
-    setIsLiked(!isLiked);
   };
 
   return (
     <button className="photo-list__fav-icon" onClick={handleFavoriteClick}>
-      <FavIcon selected={isLiked} />
+      <FavIcon selected={isFavourite()} />
     </button>
   );
 };
